@@ -1,7 +1,7 @@
 package game
 
 type Game struct {
-	id              string
-	name            string
-	thumbnailImgUrl string
+	id           string
+	name         string
+	thumbnailUrl string `db:thumbnail_url`
 }

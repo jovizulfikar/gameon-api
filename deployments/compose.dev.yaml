@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:11-beta1-alpine
+    container_name: gameon-db
+    environment:
+      POSTGRES_DB: gameon
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - gameon:/var/lib/postgresql/data
+    ports:
+      - 4321:5432
+
+volumes:
+  gameon:
